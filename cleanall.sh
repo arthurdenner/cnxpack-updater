@@ -26,7 +26,6 @@ echo "cleaning resources..."
 cd resources
 rm -rf app_rcm.bin
 rm -rf app_forwarder.nro
-rm -rf app-forwarder.nro
 cd ..
 
 echo "finishing..."

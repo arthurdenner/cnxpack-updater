@@ -68,7 +68,7 @@ volatile nyx_storage_t *nyx_str = (nyx_storage_t *)NYX_STORAGE_ADDR;
 #define CBFS_DRAM_EN_ADDR   0x4003e000
 #define  CBFS_DRAM_MAGIC    0x4452414D // "DRAM"
 
-char appName[100];
+//char appName[100];
 
 bool tmpPrintAgain = false;
 char *tmpFolderName;
@@ -758,6 +758,7 @@ void ipl_main()
         if (f_stat(filename, NULL) == FR_OK)
         {
             //reading cleaninstall file to get the app name
+/*
             FIL fil;
             FRESULT res;
             res = f_open(&fil, filename, FA_READ);
@@ -765,6 +766,7 @@ void ipl_main()
                 while (f_gets(appName, sizeof appName, &fil))
                     break;
             f_close(&fil);
+*/
 
             //removing flag file
             f_unlink(filename);
